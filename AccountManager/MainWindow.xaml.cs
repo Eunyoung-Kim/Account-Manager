@@ -55,7 +55,7 @@ namespace AccountManager
                             }
                             else
                             {
-                                if (MessageBox.Show($"Do you want to withdraw ${AmountTB.Text} from your Saving account?", "Transaction Confirmation", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                                if (MessageBox.Show($"Do you want to withdraw ${AmountTB.Text} from your Saving account?", "Transaction Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
                                 {
                                     s.Withdraw(Convert.ToDouble(AmountTB.Text));
                                     BalanceTB.Text = Convert.ToString(s.Balance);
@@ -66,7 +66,7 @@ namespace AccountManager
                         //Deposit
                         if (DepositRadio.IsChecked == true)
                         {
-                            if (MessageBox.Show($"Do you want to deposit ${AmountTB.Text} to your Saving account?", "Transaction Confirmation", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                            if (MessageBox.Show($"Do you want to deposit ${AmountTB.Text} to your Saving account?", "Transaction Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
                             {
                                 s.Deposit(Convert.ToDouble(AmountTB.Text));
                                 BalanceTB.Text = Convert.ToString(s.Balance);
@@ -86,7 +86,7 @@ namespace AccountManager
                             }
                             else
                             {
-                                if (MessageBox.Show($"Do you want to withdraw ${AmountTB.Text} from your Chequing account?", "Transaction Confirmation", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                                if (MessageBox.Show($"Do you want to withdraw ${AmountTB.Text} from your Chequing account?", "Transaction Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
                                 {
                                     c.Withdraw(Convert.ToDouble(AmountTB.Text));
                                     BalanceTB.Text = Convert.ToString(c.Balance);
@@ -97,7 +97,7 @@ namespace AccountManager
                         //Deposit
                         if (DepositRadio.IsChecked == true)
                         {
-                            if (MessageBox.Show($"Do you want to deposit ${AmountTB.Text} to your Chequing account?", "Transaction Confirmation", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                            if (MessageBox.Show($"Do you want to deposit ${AmountTB.Text} to your Chequing account?", "Transaction Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
                             {
                                 c.Deposit(Convert.ToDouble(AmountTB.Text));
                                 BalanceTB.Text = Convert.ToString(c.Balance);
